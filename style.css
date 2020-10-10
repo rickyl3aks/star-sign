@@ -46,36 +46,29 @@ form button:hover {
 }
 
 .star-sign {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   font-size: 2rem;
   border: none;
+  padding: 1rem;
   color: #232323;
-  outline: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.7);
+  visibility: hidden;
 }
 
 .info {
-  background: #d14018;
-  color: #fff;
+  background: #dfd4d1;
+  color: rgb(90, 81, 81);
   border: none;
   cursor: pointer;
   font-size: 1rem;
   outline: none;
+  display: block;
   cursor: pointer;
   font-weight: bold;
   border-radius: 10px;
-  flex: 1;
-  position: absolute;
+  margin: 1rem auto;
   padding: 10px;
-  top: 0;
-  left: 1000px;
   visibility: hidden;
-}
-
-.star-container {
-  position: relative;
 }
 
 .info:hover {

@@ -44,13 +44,13 @@ function getMonth(e) {
 
   //get month
   const dates = date.value;
-  const monthDate = function (dt) {
+  const monthDate = (dt) => {
     return dt.getMonth();
   };
   const dateMonth = monthDate(new Date(dates));
 
   //get day
-  const day = function (e) {
+  const day = (e) => {
     return e.getDate();
   };
   const dateDay = day(new Date(dates));
@@ -331,8 +331,10 @@ function getMonth(e) {
 function button(header) {
   if (header.classList.contains("star-sign")) {
     info.style.visibility = "visible";
+    header.style.visibility = "visible";
   } else {
     info.style.visibility = "hidden";
+    header.style.visibility = "hidden";
   }
 }
 
