@@ -2,6 +2,69 @@
 const date = document.querySelector("#date");
 const btn = document.querySelector(".btn");
 const div = document.querySelector(".star-sign-result");
+const para = document.querySelector(".description");
+const header = document.querySelector(".star-sign");
+const info = document.querySelector(".info");
+const api = "https://zodiacal.herokuapp.com/api";
+
+/*fetch(api, {
+  method: "GET",
+  mode: "no-cors",
+  dataType: "jsonp",
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  },
+})
+  .then(function (response) {
+    if (response.status !== 200) {
+      console.log(
+        "Looks like there was a problem. Status Code: " + response.type
+      );
+      return;
+    }
+
+    // Examine the text in the response
+    response.json().then(function (data) {
+      console.log(data);
+    });
+  })
+  .catch(function (err) {
+    console.log("Fetch Error :-S", err);
+  });
+
+/*async function starSign() {
+  const response = await fetch(api);
+  const data = await response.json();
+  console.log(data);
+}
+
+starSign();*/
+
+/*function starSign() {
+  let headers = new Headers();
+
+  headers.append("Content-Type", "application/json");
+  headers.append("Accept", "application/json");
+  headers.append("Access-Control-Allow-Credentials", "true");
+
+  headers.append("GET", "POST", "OPTIONS");
+
+  fetch(api, {
+    //mode: 'no-cors',
+    mode: "no-cors",
+    method: "POST",
+    headers: headers,
+    dataType: "jsonp",
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch((error) => console.log("Authorization failed : " + error.message));
+}
+
+starSign();*/
+
 const starSign = {
   Capricorn:
     "<b>Capricorns</b> are responsible and disciplined. They excel in management roles because of their ability to make plans and follow through with them. They’re not the type of person to dilly-dally when deciding where to eat. They have great self-control, which is good, but it can sometimes make them appear stand-offish. Capricorns enjoy music and value their family above all else.",
@@ -29,11 +92,6 @@ const starSign = {
     "<b>Sagittarius</b> are open-minded and have a great sense of humour. They love to travel and are enthusiastic about exploring new places with new people. What's more, they’re doers; when they have an idea, they set about making it happen (although they do have a tendency to make promises they can't keep). People born under this sign hate clingy people. They prefer to be free and independent, rather than have others hold them back.",
 };
 
-const para = document.querySelector(".description");
-
-const header = document.querySelector(".star-sign");
-const info = document.querySelector(".info");
-
 //Event listener
 btn.addEventListener("click", getMonth);
 info.addEventListener("click", infoStar);
@@ -55,7 +113,7 @@ function getMonth(e) {
   };
   const dateDay = day(new Date(dates));
 
-  //cariable star sign
+  //variable star sign
   const capricorn = header.classList.remove("capricorn");
   const aquarius = header.classList.remove("acquarius");
   const pisces = header.classList.remove("pisces");
@@ -255,7 +313,6 @@ function getMonth(e) {
     gemini;
     cancer;
     leo;
-
     libra;
     scorpio;
     sagittarius;
@@ -277,7 +334,6 @@ function getMonth(e) {
     cancer;
     leo;
     virgo;
-
     scorpio;
     sagittarius;
     button(header);
@@ -299,7 +355,6 @@ function getMonth(e) {
     leo;
     virgo;
     libra;
-
     sagittarius;
     button(header);
   } else if (
