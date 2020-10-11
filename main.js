@@ -1,5 +1,4 @@
 //Selector
-const date = document.querySelector("#date");
 const btn = document.querySelector(".btn");
 const div = document.querySelector(".star-sign-result");
 const para = document.querySelector(".description");
