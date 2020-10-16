@@ -18,30 +18,14 @@ async function zodiacSign() {
 
     //get month
     const dates = date.value;
-    const monthDate = (dt) => {
-      return dt.getMonth();
-    };
+    const monthDate = (dt) => dt.getMonth();
+
     const dateMonth = monthDate(new Date(dates));
 
     //get day
-    const day = (e) => {
-      return e.getDate();
-    };
-    const dateDay = day(new Date(dates));
+    const day = (e) => e.getDate();
 
-    //variable star sign
-    const capricorn = header.classList.remove("capricorn");
-    const aquarius = header.classList.remove("acquarius");
-    const pisces = header.classList.remove("pisces");
-    const aries = header.classList.remove("aries");
-    const taurus = header.classList.remove("taurus");
-    const gemini = header.classList.remove("gemini");
-    const cancer = header.classList.remove("cancer");
-    const leo = header.classList.remove("leo");
-    const virgo = header.classList.remove("virgo");
-    const libra = header.classList.remove("libra");
-    const scorpio = header.classList.remove("scorpio");
-    const sagittarius = header.classList.remove("sagittarius");
+    const dateDay = day(new Date(dates));
 
     //if statement
     if (
@@ -147,32 +131,49 @@ async function zodiacSign() {
       header.style.visibility = "hidden";
     }
   }
+
+  starSign.forEach((sign) =>
+    document.write(`${sign.name}: ${sign.mental_traits}`)
+  );
+
   function infoStar() {
     if (header.classList.contains("capricorn")) {
       //star sign description
       para.innerHTML = starSign[9].mental_traits[0];
+      header.classList.remove("capricorn");
     } else if (header.classList.contains("aquarius")) {
       para.innerHTML = `${starSign[10].mental_traits[0]}. ${starSign[10].mental_traits[1]}. ${starSign[10].mental_traits[2]}`;
+      header.classList.remove("aquarius");
     } else if (header.classList.contains("pisces")) {
       para.innerHTML = `${starSign[11].mental_traits[0]}. ${starSign[11].mental_traits[1]}. ${starSign[11].mental_traits[2]}`;
+      header.classList.remove("pisces");
     } else if (header.classList.contains("aries")) {
       para.innerHTML = `${starSign[0].mental_traits[0]}. ${starSign[0].mental_traits[1]}. ${starSign[0].mental_traits[2]}`;
+      header.classList.remove("aries");
     } else if (header.classList.contains("taurus")) {
       para.innerHTML = `${starSign[1].mental_traits[0]}. ${starSign[1].mental_traits[1]}. ${starSign[1].mental_traits[2]}`;
+      header.classList.remove("taurus");
     } else if (header.classList.contains("gemini")) {
       para.innerHTML = `${starSign[2].mental_traits[0]}. ${starSign[2].mental_traits[1]}. ${starSign[2].mental_traits[2]}`;
+      header.classList.remove("gemini");
     } else if (header.classList.contains("cancer")) {
       para.innerHTML = `${starSign[3].mental_traits[0]}. ${starSign[3].mental_traits[1]}. ${starSign[3].mental_traits[2]}`;
+      header.classList.remove("cancer");
     } else if (header.classList.contains("leo")) {
       para.innerHTML = `${starSign[4].mental_traits[0]}. ${starSign[4].mental_traits[1]}. ${starSign[4].mental_traits[2]}`;
+      header.classList.remove("leo");
     } else if (header.classList.contains("virgo")) {
       para.innerHTML = `${starSign[5].mental_traits[0]}. ${starSign[5].mental_traits[1]}. ${starSign[5].mental_traits[2]}`;
+      header.classList.remove("virgo");
     } else if (header.classList.contains("libra")) {
       para.innerHTML = `${starSign[6].mental_traits[0]}. ${starSign[6].mental_traits[1]}. ${starSign[6].mental_traits[2]}`;
+      header.classList.remove("libra");
     } else if (header.classList.contains("scorpio")) {
       para.innerHTML = `${starSign[7].mental_traits[0]}. ${starSign[7].mental_traits[1]}. ${starSign[7].mental_traits[2]}`;
+      header.classList.remove("scorpio");
     } else if (header.classList.contains("sagittarius")) {
       para.innerHTML = `${starSign[8].mental_traits[0]}. ${starSign[8].mental_traits[1]}. ${starSign[8].mental_traits[2]}`;
+      header.classList.remove("sagittarius");
     }
   }
 }
