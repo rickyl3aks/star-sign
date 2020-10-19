@@ -132,10 +132,6 @@ async function zodiacSign() {
     }
   }
 
-  starSign.forEach((sign) =>
-    document.write(`${sign.name}: ${sign.mental_traits}`)
-  );
-
   function infoStar() {
     if (header.classList.contains("capricorn")) {
       //star sign description
