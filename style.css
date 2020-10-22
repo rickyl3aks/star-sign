@@ -1,91 +1,97 @@
-body {
-  background: linear-gradient(to right, #dd350b, #f5f4ad);
-  font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
+body {
+  font-family: sans-serif;
+  background-color: #a07777;
+}
+
+#container {
+  width: 600px;
+  background-color: #e0dede;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem 5rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
   text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin: 1rem;
+  text-transform: uppercase;
   color: #fff;
-  font-size: 2.5rem;
+}
+
+div h1 {
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  letter-spacing: 0.4rem;
+  line-height: 3.5rem;
+  padding: 0.5rem;
+}
+
+div h1:hover {
+  background-color: aquamarine;
+  border-radius: 1rem;
 }
 
 p {
+  width: 400px;
   text-align: center;
-  color: #232323;
-  font-size: 1.5rem;
-}
-
-form {
-  min-height: 20vh;
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-form input,
-form button {
-  padding: 0.5rem;
-  font-size: 2rem;
-  border: none;
-  background: #eee;
-  outline: none;
-}
-
-form button {
-  border-top-right-radius: 10px;
-  cursor: pointer;
-  color: #75741b;
-  background: #eee;
-  font-size: 1.9rem;
-  outline: none;
-}
-
-form button:hover {
-  background: #dd350b;
-  color: #eee;
-}
-
-.star-sign {
-  font-size: 2rem;
-  border: none;
+  border: 10px solid #232323;
+  margin: 1.5rem auto;
   padding: 1rem;
-  color: #232323;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.7);
-  visibility: hidden;
-}
-
-.info {
-  background: #dfd4d1;
-  color: rgb(90, 81, 81);
-  border: none;
-  cursor: pointer;
+  border-radius: 5px;
   font-size: 1rem;
-  outline: none;
-  display: block;
+  animation-name: opacity;
+  animation-duration: 1.8s;
+}
+
+button {
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-transform: uppercase;
   cursor: pointer;
-  font-weight: bold;
-  border-radius: 10px;
-  margin: 1rem auto;
-  padding: 10px;
-  visibility: hidden;
+  justify-content: center;
+  text-align: center;
+  margin: 0.2rem;
+  background-color: #a07777;
+  border: none;
 }
 
-.info:hover {
-  opacity: 0.5;
+button:hover {
+  background-color: #664c4c;
 }
 
-@media only screen and (max-width: 700px) {
-  .info {
-    left: 530px;
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-.description {
-  background: rgba(255, 255, 255, 0.7);
-  color: #232323;
-  text-align: left;
-  border-top-left-radius: 10px;
-  letter-spacing: 0.1rem;
-  padding: 0 1rem;
+/*phone screen*/
+
+@media only screen and (max-width: 400px) {
+  div h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  #container {
+    width: 300px;
+    padding: 0.5rem 1rem;
+  }
 }
