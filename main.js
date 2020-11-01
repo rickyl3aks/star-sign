@@ -13,7 +13,9 @@ let btnNine = document.createElement("button");
 
 async function zodiacSign() {
   //fetch sign
-  const response = await fetch("star_sign.json");
+  const response = await fetch(
+    "https://cors-anywhere.herokuapp.com/https://zodiacal.herokuapp.com/api"
+  );
   const starSign = await response.json();
   //loop on each star sign
   starSign.forEach((sign) => {
