@@ -10,13 +10,19 @@ let btnSix = document.createElement("button");
 let btnSeven = document.createElement("button");
 let btnEight = document.createElement("button");
 let btnNine = document.createElement("button");
+let img = document.getElementById("img");
+
+img.classList.add("img");
 
 async function zodiacSign() {
   //fetch sign
   const response = await fetch(
     "https://cors-anywhere.herokuapp.com/https://zodiacal.herokuapp.com/api"
   );
+
   const starSign = await response.json();
+  img.classList.remove("img");
+
   //loop on each star sign
   starSign.forEach((sign) => {
     let title = document.createElement("h1");
@@ -102,4 +108,4 @@ async function zodiacSign() {
   });
 }
 
-zodiacSign();
+setTimeout(zodiacSign, 100);

@@ -48,8 +48,9 @@ p {
   padding: 1rem;
   border-radius: 5px;
   font-size: 1rem;
+  overflow: hidden;
   animation-name: opacity;
-  animation-duration: 1.8s;
+  animation-duration: 1s;
 }
 
 button {
@@ -66,6 +67,10 @@ button {
 
 button:hover {
   background-color: #664c4c;
+}
+
+.img {
+  content: url("./spinner/spinner.gif");
 }
 
 @keyframes opacity {
