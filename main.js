@@ -12,17 +12,30 @@ let btnEight = document.createElement("button");
 let btnNine = document.createElement("button");
 let img = document.getElementById("img");
 
+//spinner img waiting to fetch API
 img.classList.add("img");
 
 async function zodiacSign() {
-  //fetch sign
-  const response = await fetch(
-    "https://cors-anywhere.herokuapp.com/https://zodiacal.herokuapp.com/api"
-  );
+  try {
+    //fetch sign
+    const response = await fetch(
+      "https://cors-anywhere.herokuapp.com/https://zodiacal.herokuapp.com/api"
+    );
+    const starSign = await response.json();
+    getStarSign(starSign);
+  } catch (e) {
+    img.classList.remove("img");
+    p.textContent =
+      "Sorry, there was a problem communicating with the Zodiac Sign. Please try again later 💻";
+    container.appendChild(p);
+  }
+}
 
-  const starSign = await response.json();
+zodiacSign();
+
+function getStarSign(starSign) {
+  //remove spinner once fetch is complete
   img.classList.remove("img");
-
   //loop on each star sign
   starSign.forEach((sign) => {
     let title = document.createElement("h1");
@@ -107,5 +120,3 @@ async function zodiacSign() {
     });
   });
 }
-
-setTimeout(zodiacSign, 100);
