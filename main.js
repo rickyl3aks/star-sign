@@ -15,7 +15,7 @@ let img = document.getElementById("img");
 //cors-anywhere.herokuapp.com/https://zodiacal.herokuapp.com/api
 
 //spinner img waiting to fetch API
-https: img.classList.add("img");
+img.classList.add("img");
 
 async function zodiacSign() {
   try {
