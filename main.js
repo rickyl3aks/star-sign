@@ -12,15 +12,15 @@ let btnEight = document.createElement("button");
 let btnNine = document.createElement("button");
 let img = document.getElementById("img");
 
+//cors-anywhere.herokuapp.com/https://zodiacal.herokuapp.com/api
+
 //spinner img waiting to fetch API
-img.classList.add("img");
+https: img.classList.add("img");
 
 async function zodiacSign() {
   try {
     //fetch sign
-    const response = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://zodiacal.herokuapp.com/api"
-    );
+    const response = await fetch("./star_sign.json");
     const starSign = await response.json();
     getStarSign(starSign);
   } catch (e) {
