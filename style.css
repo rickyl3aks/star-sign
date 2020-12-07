@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  background-color: #a07777;
+  background: linear-gradient(to right, #a07777, #c2c2c2);
 }
 
 #container {
@@ -37,20 +37,22 @@ div h1 {
 
 div h1:hover {
   background-color: #a07777;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
 }
 
 p {
-  width: 400px;
   text-align: center;
   justify-content: center;
   border: 10px solid #232323;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 1.5rem auto;
   padding: 1rem;
   border-radius: 5px;
   font-size: 1rem;
+  overflow: hidden;
   animation-name: opacity;
-  animation-duration: 1.8s;
+  animation-duration: 1s;
 }
 
 button {
@@ -67,6 +69,10 @@ button {
 
 button:hover {
   background-color: #664c4c;
+}
+
+.img {
+  content: url("./spinner/spinner.gif");
 }
 
 @keyframes opacity {
