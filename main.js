@@ -10,6 +10,7 @@ let btnSix = document.createElement("button");
 let btnSeven = document.createElement("button");
 let btnEight = document.createElement("button");
 let btnNine = document.createElement("button");
+let btnTen = document.createElement("button");
 let image = document.getElementById("img");
 
 image.classList.add("img");
@@ -50,11 +51,12 @@ function getStarSign(starSign) {
         btnTwo.innerHTML = "Compatibility";
         btnThree.innerHTML = "Good traits";
         btnFour.innerHTML = "Bad traits";
-        btnFive.innerHTML = "How to spot";
+        btnFive.innerHTML = "Motto";
         btnSix.innerHTML = "Keyword";
         btnSeven.innerHTML = "Favourite";
         btnEight.innerHTML = "Secret Wish";
         btnNine.innerHTML = "Hates";
+        btnTen.innerHTML = "How to Spot";
         container.insertBefore(p, title.nextSibling);
         container.insertBefore(btn, p.nextSibling);
         container.insertBefore(btnTwo, p.nextSibling);
@@ -65,6 +67,7 @@ function getStarSign(starSign) {
         container.insertBefore(btnSeven, p.nextSibling);
         container.insertBefore(btnEight, p.nextSibling);
         container.insertBefore(btnNine, p.nextSibling);
+        container.insertBefore(btnTen, p.nextSibling);
         firstClick = true;
       } else {
         firstClick = false;
@@ -79,42 +82,47 @@ function getStarSign(starSign) {
         container.removeChild(btnSeven);
         container.removeChild(btnEight);
         container.removeChild(btnNine);
+        container.removeChild(btnTen);
       }
       //add info alogn with the right btn clicked
       btn.addEventListener("click", () => {
-        p.innerHTML = `🕶️ ${sign.famous_people}`;
+        p.textContent = `🕶️ ${sign.famous_people}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnTwo.addEventListener("click", () => {
-        p.innerHTML = `💓 ${sign.compatibility}`;
+        p.textContent = `💓 ${sign.compatibility}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnThree.addEventListener("click", () => {
-        p.innerHTML = `👼 ${sign.good_traits}`;
+        p.textContent = `👼 ${sign.good_traits}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnFour.addEventListener("click", () => {
-        p.innerHTML = `👿 ${sign.bad_traits}`;
+        p.textContent = `👿 ${sign.bad_traits}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnFive.addEventListener("click", () => {
-        p.innerHTML = `👀 ${sign.how_to_spot}`;
+        p.textContent = `🔖 ${sign.motto}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnSix.addEventListener("click", () => {
-        p.innerHTML = `🔓 ${sign.keywords}`;
+        p.textContent = `🔓 ${sign.keywords}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnSeven.addEventListener("click", () => {
-        p.innerHTML = `✌️ ${sign.favorites}`;
+        p.textContent = `✌️ ${sign.favorites}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnEight.addEventListener("click", () => {
-        p.innerHTML = `🧙 ${sign.secret_wish}`;
+        p.textContent = `🧙 ${sign.secret_wish}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnNine.addEventListener("click", () => {
-        p.innerHTML = `😒 ${sign.hates}`;
+        p.textContent = `😒 ${sign.hates}`;
+        container.insertBefore(p, title.nextSibling);
+      });
+      btnTen.addEventListener("click", () => {
+        p.textContent = `👀 ${sign.how_to_spot}`;
         container.insertBefore(p, title.nextSibling);
       });
     });
