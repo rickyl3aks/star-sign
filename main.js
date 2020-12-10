@@ -51,8 +51,8 @@ function getStarSign(starSign) {
         btnTwo.innerHTML = "Compatibility";
         btnThree.innerHTML = "Good traits";
         btnFour.innerHTML = "Bad traits";
-        btnFive.innerHTML = "Motto";
-        btnSix.innerHTML = "Keyword";
+        btnFive.innerHTML = "Keyword";
+        btnSix.innerHTML = "Motto";
         btnSeven.innerHTML = "Favourite";
         btnEight.innerHTML = "Secret Wish";
         btnNine.innerHTML = "Hates";
@@ -102,11 +102,11 @@ function getStarSign(starSign) {
         container.insertBefore(p, title.nextSibling);
       });
       btnFive.addEventListener("click", () => {
-        p.textContent = `🔖 ${sign.motto}`;
+        p.textContent = `🔓 ${sign.keyword}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnSix.addEventListener("click", () => {
-        p.textContent = `🔓 ${sign.keywords}`;
+        p.textContent = `🔖${sign.motto}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnSeven.addEventListener("click", () => {
