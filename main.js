@@ -102,11 +102,11 @@ function getStarSign(starSign) {
         container.insertBefore(p, title.nextSibling);
       });
       btnFive.addEventListener("click", () => {
-        p.textContent = `🔓 ${sign.keyword}`;
+        p.textContent = `🔓 ${sign.keywords}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnSix.addEventListener("click", () => {
-        p.textContent = `🔖${sign.motto}`;
+        p.textContent = `🔖 ${sign.motto}`;
         container.insertBefore(p, title.nextSibling);
       });
       btnSeven.addEventListener("click", () => {
