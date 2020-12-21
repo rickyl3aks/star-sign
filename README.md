@@ -1,5 +1,5 @@
-<h1>Star Sign Zodiac</h1>
+<h1>Star Sign</h1>
 
-Get to know your personality according to your star sign 🌟
-
-<p>12 star sign displayed on your screen, once you pressed on your zodiac sign, you will get your personality according to your sun sign 🌞 and some additional info about that zodiac sign </p>
+<p>Getting information from an extarnal API made by me 🤩 first time deploy🚀 with heroku</p>
+<br/>
+<p>12 signs displayed, press the sign that you want to get further infos</p>
