@@ -14,7 +14,7 @@ let img = document.getElementById("img");
 
 img.classList.add("img");
 
-async function zodiacSign() {
+zodiacSign = async () => {
   try {
     //fetch sign
     const response = await fetch(
@@ -28,11 +28,11 @@ async function zodiacSign() {
       "Sorry, there was a problem communicating with the Zodiac Sign. Please try again later 💻";
     container.appendChild(p);
   }
-}
+};
 
 zodiacSign();
 
-function getStarSign(starSign) {
+getStarSign = (starSign) => {
   //remove spinner once fetch is complete
   img.classList.remove("img");
   //loop on each star sign
@@ -118,4 +118,4 @@ function getStarSign(starSign) {
       });
     });
   });
-}
+};
