@@ -72,7 +72,7 @@ button:hover {
 }
 
 .img {
-  content: url("./spinner/spinner.gif");
+  content: url("./images/spinner/spinner.gif");
 }
 
 @keyframes opacity {
