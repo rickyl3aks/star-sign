@@ -7,10 +7,7 @@
 body {
   font-family: sans-serif;
   background: linear-gradient(to right, #a07777, #c2c2c2);
-<<<<<<< HEAD
   background-image: url("./images/wallpaper/moon_and_sun.jpg");
-=======
->>>>>>> d3f4e6489fb5d855423a2da13cb07ea2cdc59e24
 }
 
 #container {
@@ -41,11 +38,7 @@ div h1 {
 }
 
 div h1:hover {
-<<<<<<< HEAD
   background-color: rgba(238, 219, 181, 0.7);
-=======
-  background-color: #a07777;
->>>>>>> d3f4e6489fb5d855423a2da13cb07ea2cdc59e24
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
 }
@@ -82,10 +75,6 @@ button:hover {
 
 .img {
   content: url("./images/spinner/spinner.gif");
-}
-
-.img {
-  content: url("./spinner/spinner.gif");
 }
 
 @keyframes opacity {
