@@ -7,11 +7,12 @@
 body {
   font-family: sans-serif;
   background: linear-gradient(to right, #a07777, #c2c2c2);
+  background-image: url("./images/wallpaper/moon_and_sun.jpg");
 }
 
 #container {
   width: 600px;
-  background-color: #e0dede;
+  background-color: rgba(216, 214, 214, 0.7);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 2rem 5rem;
   border-radius: 1rem;
@@ -24,6 +25,7 @@ body {
   margin: 1rem;
   text-transform: uppercase;
   color: #fff;
+  text-shadow: 2px 3px 4px #333;
 }
 
 div h1 {
@@ -36,7 +38,7 @@ div h1 {
 }
 
 div h1:hover {
-  background-color: #a07777;
+  background-color: rgba(238, 219, 181, 0.7);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
 }
@@ -63,12 +65,12 @@ button {
   justify-content: center;
   text-align: center;
   margin: 0.2rem;
-  background-color: #a07777;
+  background-color: rgba(238, 219, 181, 0.8);
   border: none;
 }
 
 button:hover {
-  background-color: #664c4c;
+  background-color: rgba(202, 187, 155, 0.8);
 }
 
 .img {
