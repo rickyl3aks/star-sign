@@ -23,7 +23,6 @@ zodiacSign = async () => {
     const starSign = await response.json();
     getStarSign(starSign);
   } catch (e) {
-    img.classList.remove("img");
     p.textContent =
       "Sorry, there was a problem communicating with the Zodiac Sign. Please try again later 💻";
     container.appendChild(p);
