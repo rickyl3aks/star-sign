@@ -18,12 +18,11 @@ zodiacSign = async () => {
   try {
     //fetch sign
     const response = await fetch(
-      "https://zodiac-sign-api.herokuapp.com/zodiac_sign"
+      "https://sore-jade-tadpole-tux.cyclic.app/zodiac_sign"
     );
     const starSign = await response.json();
     getStarSign(starSign);
   } catch (e) {
-    img.classList.remove("img");
     p.textContent =
       "Sorry, there was a problem communicating with the Zodiac Sign. Please try again later 💻";
     container.appendChild(p);
