@@ -38,6 +38,15 @@ getStarSign = (starSign) => {
   //loop on each star sign
   starSign.forEach((sign) => {
     let title = document.createElement("h1");
+    let img_logo = document.createElement("img");
+    img_logo.src = sign.img;
+    img_logo.style.height = "50px";
+    img_logo.style.display = "block";
+    img_logo.style.marginLeft = "auto";
+    img_logo.style.marginRight = "auto";
+    img_logo.style.marginTop = "10px";
+    img_logo.style.marginBottom = "10px";
+    container.appendChild(img_logo);
     title.innerHTML = sign.name;
     container.appendChild(title);
     //add event listener
