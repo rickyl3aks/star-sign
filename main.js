@@ -18,7 +18,7 @@ zodiacSign = async () => {
   try {
     //fetch sign
     const response = await fetch(
-      "https://zodiac-sign-api.herokuapp.com/zodiac_sign"
+      "https://sore-jade-tadpole-tux.cyclic.app/zodiac_sign"
     );
     const starSign = await response.json();
     getStarSign(starSign);
