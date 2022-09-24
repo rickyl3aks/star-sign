@@ -1,3 +1,5 @@
+import { URL } from "./config.js";
+
 const container = document.getElementById("container");
 let firstClick = false;
 let p = document.createElement("p");
@@ -14,12 +16,10 @@ let img = document.getElementById("img");
 
 img.classList.add("img");
 
-zodiacSign = async () => {
+const zodiacSign = async () => {
   try {
     //fetch sign
-    const response = await fetch(
-      "https://sore-jade-tadpole-tux.cyclic.app/zodiac_sign"
-    );
+    const response = await fetch(URL);
     const starSign = await response.json();
     getStarSign(starSign);
   } catch (e) {
@@ -32,7 +32,7 @@ zodiacSign = async () => {
 
 zodiacSign();
 
-getStarSign = (starSign) => {
+const getStarSign = (starSign) => {
   //remove spinner once fetch is complete
   img.classList.remove("img");
   //loop on each star sign
