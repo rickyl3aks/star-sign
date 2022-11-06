@@ -14,12 +14,11 @@ let btnEight = document.createElement("button");
 let btnNine = document.createElement("button");
 let img = document.getElementById("img");
 
-if ("serviceWorker" in navigator){
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js")
-    .then(registration => console.log("Service worker registered"))
-    .catch(err => "SW registration failed")
-  })
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () =>
+    navigator.serviceWorker.register('sw.js')
+      .then(registration => console.log('Service Worker registered'))
+      .catch(err => 'SW registration failed'));
 }
 
 img.classList.add("img");
